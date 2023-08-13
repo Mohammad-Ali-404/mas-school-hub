@@ -1,9 +1,12 @@
-import Image from 'next/image'
-
+import Navbar from '@/components/Navbar'
+import TopNav from '@/components/TopNav'
 export default function Home() {
   return (
     <main className="">
-      <h1>this is our home page</h1>
+      <div>
+        <TopNav/>
+        <Navbar/>
+      </div>
     </main>
   )
 }
