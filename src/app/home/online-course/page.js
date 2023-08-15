@@ -4,9 +4,8 @@ import React from 'react';
 const page = () => {
     return (
         <div>
-            <h1>this is online course page</h1>
-            <h1>this is online course page</h1>
-            <h1>this is online course page</h1>
+            <p>This is Online Course section</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque voluptate sequi, inventore sapiente sit recusandae excepturi magni maxime perspiciatis quae ab quis beatae maiores, soluta facilis, delectus fugit placeat saepe?</p>
         </div>
     );
 };
