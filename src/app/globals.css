@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.button{
+    padding: 5px 15px;
+    color: white;
+    background-color: #155E75;
+    border-radius: 10px;
+    font-weight: 600;
+}
+.button:hover{
+    background-color: #0c4354;
+}
+.pull{
+    animation: bounce 0.7s cubic-bezier(0.6, -0.28, 0.735, 0.045) infinite alternate;
+}
+@keyframes bounce {
+    0%{
+        transform: translate(0px);
+
+    }
+    50%{
+
+    }
+    100%{
+        transform: translateY(10px);
+    }
+}

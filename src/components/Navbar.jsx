@@ -1,28 +1,53 @@
+"use client"
 import Link from 'next/link';
 import Image from 'next/image';
-
-import React from 'react';
+import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
+import React, { useState } from 'react';
 
 const Navbar = () => {
+    const [showMenu, setShowMenu] = useState(false);
+
+    const toggleMenu = () => {
+        setShowMenu(!showMenu);
+    };
+
     return (
         <div>
-            <nav className="flex items-center justify-between px-4 py-2 bg-gray-100">
+            <nav className="flex items-center justify-between px-10 md:px-16 relative bg-gray-100">
                 <div className="logo">
-                    <Link href="/">           
-                            <Image src="/path-to-your-logo.png" alt="Logo" width={64} height={64} />
+                    <Link href="/">
+                        <Image
+                            src="/images/logo.png" alt="Logo"
+                            width={200}
+                            height={64}
+                            priority={true}
+                        />
                     </Link>
                 </div>
-                <ul className="flex space-x-4">
-                    <li><Link href="/">Home</Link></li>
-                    <li><Link href="/online-course">Online Course</Link></li>
-                    <li><Link href="/online-admission">Online Admission</Link></li>
-                    <li><Link href="/about-us">About Us</Link></li>
-                    <li><Link href="/gallery">Gallery</Link></li>
-                    <li><Link href="/events">Events</Link></li>
-                    <li><Link href="/news">News</Link></li>
-                    <li><Link href="/contact">Contact</Link></li>
-                </ul>
+                <div className='absolute -bottom-4 left-1/2 md:hidden'>
+                    <button className='rounded-full bg-cyan-800 hover:bg-cyan-900 text-white p-1 pull' onClick={toggleMenu}>
+                        {
+                            showMenu ? <IoIosArrowDown title='Tap to see menu' /> :<IoIosArrowUp title='Tap to close menu'/>
+                        }
+                    
+                    </button>
+                </div>
+                <div>
+                    <button className='button'>
+                        Log In
+                    </button>
+                </div>
             </nav>
+            <ul className={`md:flex  ${showMenu ? 'hidden' : 'justify-between'} text-center mt-6 md:mt-0 px-10 md:px-16 bg-gray-200 font-bold`}>
+                <li className='py-4 hover:border-b-4 hover:border-cyan-800 hover:text-cyan-800'><Link href="/">Home</Link></li>
+                <li className='py-4 hover:border-b-4 hover:border-cyan-800 hover:text-cyan-800'><Link href="/online-course">Online Course</Link></li>
+                <li className='py-4 hover:border-b-4 hover:border-cyan-800 hover:text-cyan-800'><Link href="/online-admission">Online Admission</Link></li>
+                <li className='py-4 hover:border-b-4 hover:border-cyan-800 hover:text-cyan-800'><Link href="/about-us">About Us</Link></li>
+                <li className='py-4 hover:border-b-4 hover:border-cyan-800 hover:text-cyan-800'><Link href="/gallery">Gallery</Link></li>
+                <li className='py-4 hover:border-b-4 hover:border-cyan-800 hover:text-cyan-800'><Link href="/events">Events</Link></li>
+                <li className='py-4 hover:border-b-4 hover:border-cyan-800 hover:text-cyan-800'><Link href="/news">News</Link></li>
+                <li className='py-4 hover:border-b-4 hover:border-cyan-800 hover:text-cyan-800'><Link href="/contact">Contact</Link></li>
+            </ul>
         </div>
     );
 };
