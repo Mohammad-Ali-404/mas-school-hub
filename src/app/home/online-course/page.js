@@ -5,6 +5,8 @@ const page = () => {
     return (
         <div>
             <h1>this is online course page</h1>
+            <h1>this is online course page</h1>
+            <h1>this is online course page</h1>
         </div>
     );
 };
