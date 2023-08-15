@@ -12,7 +12,7 @@ const Navbar = () => {
     };
 
     return (
-        <div>
+        <div className='static top-0'>
             <nav className="flex items-center justify-between px-10 md:px-16 relative bg-gray-100">
                 <div className="logo">
                     <Link href="/">
@@ -25,7 +25,7 @@ const Navbar = () => {
                     </Link>
                 </div>
                 <div className='absolute -bottom-4 left-1/2 md:hidden'>
-                    <button className='rounded-full bg-cyan-800 hover:bg-cyan-900 text-white p-1 pull' onClick={toggleMenu}>
+                    <button className='rounded-full bg-cyan-800 hover:bg-cyan-900 text-white p-1 pull z-20' onClick={toggleMenu}>
                         {
                             showMenu ? <IoIosArrowDown title='Tap to see menu' /> :<IoIosArrowUp title='Tap to close menu'/>
                         }

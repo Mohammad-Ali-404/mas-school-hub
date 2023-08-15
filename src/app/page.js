@@ -1,3 +1,4 @@
+import Banner from '@/components/Banner'
 import Navbar from '@/components/Navbar'
 import TopNav from '@/components/TopNav'
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
       <div>
         <TopNav/>
         <Navbar/>
+        <Banner/>
       </div>
     </main>
   )
