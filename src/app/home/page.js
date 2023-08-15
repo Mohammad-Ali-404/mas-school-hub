@@ -1,4 +1,5 @@
 "use client"
+import AboutUs from '@/components/AboutUs';
 import Banner from '@/components/Banner'
 import Facility from '@/components/Facility'
 import React from 'react';
@@ -11,6 +12,7 @@ const page = () => {
                     <Banner />
                     <Facility />
                 </div>
+                    <AboutUs/>
 
             </div>
         </div>
