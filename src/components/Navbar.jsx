@@ -12,10 +12,10 @@ const Navbar = () => {
     };
 
     return (
-        <div className='static top-0'>
+        <div>
             <nav className="flex items-center justify-between px-10 md:px-16 relative bg-gray-100">
                 <div className="logo">
-                    <Link href="/">
+                    <Link href="/home">
                         <Image
                             src="/images/logo.png" alt="Logo"
                             width={200}
@@ -33,20 +33,21 @@ const Navbar = () => {
                     </button>
                 </div>
                 <div>
+                    <Link href="/login"> 
                     <button className='button'>
                         Log In
-                    </button>
+                    </button></Link>
                 </div>
             </nav>
             <ul className={`md:flex  ${showMenu ? 'hidden' : 'justify-between'} text-center mt-6 md:mt-0 px-10 md:px-16 bg-gray-200 font-bold`}>
-                <li className='py-4 hover:border-b-4 hover:border-cyan-800 hover:text-cyan-800'><Link href="/">Home</Link></li>
-                <li className='py-4 hover:border-b-4 hover:border-cyan-800 hover:text-cyan-800'><Link href="/online-course">Online Course</Link></li>
-                <li className='py-4 hover:border-b-4 hover:border-cyan-800 hover:text-cyan-800'><Link href="/online-admission">Online Admission</Link></li>
-                <li className='py-4 hover:border-b-4 hover:border-cyan-800 hover:text-cyan-800'><Link href="/about-us">About Us</Link></li>
-                <li className='py-4 hover:border-b-4 hover:border-cyan-800 hover:text-cyan-800'><Link href="/gallery">Gallery</Link></li>
-                <li className='py-4 hover:border-b-4 hover:border-cyan-800 hover:text-cyan-800'><Link href="/events">Events</Link></li>
-                <li className='py-4 hover:border-b-4 hover:border-cyan-800 hover:text-cyan-800'><Link href="/news">News</Link></li>
-                <li className='py-4 hover:border-b-4 hover:border-cyan-800 hover:text-cyan-800'><Link href="/contact">Contact</Link></li>
+                <li className='pt-4 px-4 pb-1 hover:bg-gray-300 border-b-4 hover:border-cyan-800 hover:text-cyan-800'><Link href="/home">Home</Link></li>
+                <li className='pt-4 px-4 pb-1 hover:bg-gray-300 hover:border-b-4 hover:border-cyan-800 hover:text-cyan-800'><Link href="/home/online-course">Online Course</Link></li>
+                <li className='pt-4 px-4 pb-1 hover:bg-gray-300 hover:border-b-4 hover:border-cyan-800 hover:text-cyan-800'><Link href="/home/online-admission">Online Admission</Link></li>
+                <li className='pt-4 px-4 pb-1 hover:bg-gray-300 hover:border-b-4 hover:border-cyan-800 hover:text-cyan-800'><Link href="/home/about-us">About Us</Link></li>
+                <li className='pt-4 px-4 pb-1 hover:bg-gray-300 hover:border-b-4 hover:border-cyan-800 hover:text-cyan-800'><Link href="/home/gallery">Gallery</Link></li>
+                <li className='pt-4 px-4 pb-1 hover:bg-gray-300 hover:border-b-4 hover:border-cyan-800 hover:text-cyan-800'><Link href="/home/events">Events</Link></li>
+                <li className='pt-4 px-4 pb-1 hover:bg-gray-300 hover:border-b-4 hover:border-cyan-800 hover:text-cyan-800'><Link href="/home/news">News</Link></li>
+                <li className='pt-4 px-4 pb-1 hover:bg-gray-300 hover:border-b-4 hover:border-cyan-800 hover:text-cyan-800'><Link href="/home/contact">Contact</Link></li>
             </ul>
         </div>
     );
